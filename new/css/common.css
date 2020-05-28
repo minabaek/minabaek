@@ -1,0 +1,218 @@
+@charset "utf-8";
+/* 모던브라우저 익스플로러 9부터 최적화된 css */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,
+b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+html{-webkit-text-size-adjust:none;-moz-text-size-adjust:none;-ms-text-size-adjust:none;font-size:13px}
+body{line-height:1;background-color:#fff;letter-spacing:-.05em}
+ol,ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
+table{border-collapse:collapse;border-spacing:0}
+img{max-width:100%;vertical-align:middle}
+*,::after,::before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+h1,h2,h3,h4,h5,h6,strong{font-weight:bold}
+a{text-decoration:none;cursor:pointer;color:inherit}
+a:active,a:hover{text-decoration:none}
+
+/* font-face */
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 100;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format('woff2'),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format('woff'),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 300;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format('woff2'),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format('woff'),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format('woff2'),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format('woff'),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;font-weight: 500;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format('woff2'),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format('woff'),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format('woff2'),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format('woff'),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 900;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format('woff2'),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format('woff'),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format('opentype');
+}
+
+body,h1,h2,h3,h4,h5,h6,li,a,textarea,button,strong,label,input,th  {
+    font-family:'Noto Sans KR', 'Nanum Gothic','나눔고딕','Malgun Gothic','맑은고딕',Dotum,'돋움',sans-serif;font-weight:400;
+}
+
+/* placeholder */
+input::-webkit-input-placeholder,/* Chrome/Opera/Safari */
+input::-moz-placeholder,/* Firefox 19+ */
+input:-ms-input-placeholder,/* IE 10+ */
+input:-moz-placeholder,/* Firefox 18- */
+input::placeholder{color:gray}/* Firefox 18- */
+textarea::-webkit-input-placeholder{color:gray}/* Chrome/Opera/Safari */
+textarea::-moz-placeholder{color:gray}/* Firefox 19+ */
+textarea:-ms-input-placeholder{color:gray}/* IE 10+ */
+textarea:-moz-placeholder{color:gray}/* Firefox 18- */
+textarea::placeholder{color:gray}/* Firefox 18- */
+
+/* input,textarea,button,select reset */
+input,select,textarea,button{font-size:1rem;margin:0;padding:0;border:0;outline:0;background-color:#fff;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;vertical-align:middle;cursor:pointer;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+input,select,textarea{width:100%}
+input{-webkit-appearance:none;-moz-appearance:none;appearance:none}
+input::-ms-clear{display:none}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;-moz-appearance:none;appearance:none}
+input[type=number]{-moz-appearance:textfield}
+input[type=text],
+input[type=password]{margin:0;padding:0;border:1px solid #dcdcdc}
+textarea{resize:none}
+select{-webkit-appearance:none;-moz-appearance:none;appearance:none}
+select::-ms-expand{display:none}
+
+/* *attribute* */
+/* margin-bottom */
+.mb0{margin-bottom:0!important}
+.mb5{margin-bottom:5px!important}
+.mb10{margin-bottom:10px!important}
+.mb15{margin-bottom:15px!important}
+.mb20{margin-bottom:20px!important}
+.mb25{margin-bottom:25px!important}
+.mb30{margin-bottom:30px!important}
+.mb35{margin-bottom:35px!important}
+.mb40{margin-bottom:40px!important}
+.mb45{margin-bottom:45px!important}
+.mb50{margin-bottom:50px!important}
+
+/* margin-top */
+.mt0{margin-top:0!important}
+.mt5{margin-top:5px!important}
+.mt10{margin-top:10px!important}
+.mt15{margin-top:15px!important}
+.mt20{margin-top:20px!important}
+.mt25{margin-top:25px!important}
+.mt30{margin-top:30px!important}
+.mt35{margin-top:35px!important}
+.mt40{margin-top:40px!important}
+.mt45{margin-top:45px!important}
+.mt50{margin-top:50px!important}
+.mt55{margin-top:55px!important}
+.mt60{margin-top:60px!important}
+.mt70{margin-top:70px!important}
+.mt80{margin-top:50px!important}
+.mt90{margin-top:90px!important}
+
+/* padding-bottom */
+.pb10{padding-bottom:10px!important}
+.pb15{padding-bottom:15px!important}
+.pb20{padding-bottom:20px!important}
+.pb25{padding-bottom:25px!important}
+.pb30{padding-bottom:30px!important}
+.pb35{padding-bottom:35px!important}
+.pb40{padding-bottom:40px!important}
+.pb45{padding-bottom:45px!important}
+.pb50{padding-bottom:50px!important}
+.pb60{padding-bottom:60px!important}
+.pb100{padding-bottom:100px!important}
+
+/* padding-top */
+.pt10{padding-top:10px!important}
+.pt10{padding-top:15px!important}
+.pt20{padding-top:20px!important}
+.pt10{padding-top:25px!important}
+.pt30{padding-top:30px!important}
+.pt10{padding-top:35px!important}
+.pt40{padding-top:40px!important}
+.pt10{padding-top:45px!important}
+.pt50{padding-top:50px!important}
+
+/* display */
+.db{display:block!important}
+.di{display:inline}
+.dib{display:inline-block}
+.dn{display:none!important}
+.tbl{display:table}
+.tr{display:table-row}
+.td{display:table-cell}
+
+/* vertical */
+.vt{vertical-align:top}
+.vm{vertical-align:middle}
+.vb{vertical-align:bottom}
+
+/* font-size (13px 기준 rem) */
+.fs0{font-size:0 !important;}
+.fs10{font-size:.7692rem !important;}
+.fs11{font-size:.8462rem !important;}
+.fs12{font-size:.9231rem !important;}
+.fs13{font-size:1rem !important;}
+.fs14{font-size:1.077rem !important;}
+.fs15{font-size:1.154rem !important;}
+.fs16{font-size:1.231rem !important;}
+.fs17{font-size:1.308rem !important;}
+.fs18{font-size:1.385rem !important;}
+.fs19{font-size:1.462rem !important;}
+.fs20{font-size:1.538rem !important;}
+.fs21{font-size:1.615rem !important;}
+.fs22{font-size:1.692rem !important;}
+.fs23{font-size:1.769rem !important;}
+.fs24{font-size:1.846rem !important;}
+.fs25{font-size:1.923rem !important;}
+.fs26{font-size:2rem !important;}
+.fs27{font-size:2.077rem !important;}
+.fs28{font-size:2.154rem !important;}
+.fs29{font-size:2.231rem !important;}
+.fs30{font-size:2.308rem !important;}
+.fs32{font-size:2.462rem !important;}
+.fs34{font-size:2.615rem !important;}
+.fs40{font-size:3.077rem !important;}
+.fs42{font-size:3.231rem !important;}
+.fs50{font-size:3.846rem !important;}
+
+/* font-weight */
+.fb{font-weight:bold}
+.fn{font-weight:normal}
+
+/* text-align */
+.tal{text-align:left !important;}
+.tar{text-align:right !important;}
+.tac{text-align:center !important;}
+
+/* ellipsis */
+.ellipsis{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* ellipsis row2의 경우 height과 line-height을 지정해 줘야함 */
+.ellipsis2{overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;word-wrap:break-word}
+
+/* float */
+.fl{float:left}
+.fr{float:right}
+
+/* clear fix */
+.clfix:before,.clfix:after{display:table;content:''}
+.clfix:after{clear:both}

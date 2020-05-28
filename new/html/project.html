@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+    <title>mina baek</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./../css/common.css">
+    <link rel="stylesheet" href="./../css/style.css">
+
+    <!-- script -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="./../js/common.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+    <style>
+        .project_area{padding:50px 0}
+        .project_box.inner_box{width:900px;margin:0 auto}
+        .project_box .pjt{display:inline-block;vertical-align:middle;width:300px;padding:15px 10px}
+        .project_box .pjt .pjt_cont{display:block;height:300px;padding:10px;background-position:50% 50%;background-size:100% 100%;background-repeat:no-repeat}
+        .project_box .pjt .pjt_cont.wgs{background-image:url("./../img/thumb_01_03.png")}
+        .project_box .pjt .pjt_cont.thecl{background-image:url("./../img/thumb_02_04.png")}
+        .project_box .pjt .pjt_cont.iros{background-image:url("./../img/thumb_01_06.png")}
+        .project_box .pjt .pjt_cont.hrjj{background-image:url("./../img/thumb_02_05.png")}
+        .project_box .pjt .pjt_cont.cltv{background-image:url("./../img/thumb_01_02.png")}
+        .project_box .pjt .pjt_cont.pktv{background-image:url("./../img/thumb_02_01.png")}
+        .project_box .pjt .pjt_cont:hover .pjt_more{opacity:0.9}
+        .project_box .pjt .pjt_cont .pjt_more{width:100%;height:100%;background:#fff;text-align:center;opacity:0;
+            transition:all .3s ease-in-out;
+            -webkit-transition:all .3s ease-in-out;
+            -moz-transition:all .3s ease-in-out;
+            -ms-transition:all .3s ease-in-out;
+            -o-transition:all .3s ease-in-out;}
+        .project_box .pjt .pjt_cont .pjt_more .txt_group{padding-top:50px}
+        .project_box .pjt .pjt_cont .pjt_more .category{font-size:14px;color:#767676}
+        .project_box .pjt .pjt_cont .pjt_more .name{margin-top:10px;font-size:20px;color:#000;font-weight:300}
+        .project_box .pjt .pjt_cont .pjt_more .name::after{display:block;width:100px;height:1px;margin:15px auto 0;background:#767676;content:''}
+        .project_box .pjt .pjt_cont .pjt_more .more{margin-top:6px;font-size:14px;color:#555}
+
+        
+    </style>
+</head>
+<body>
+    <div id="project" class="project_area">
+        <div class="inner_box project_box">
+            <div class="top fs0">
+                <div class="pjt">
+                    <a class="pjt_cont wgs">
+                        <figure class="pjt_more">
+                            <div class="txt_group">
+                                <p class="category">PC/M web</p>
+                                <P class="name">위 고 스타스</P>
+                                <p class="more">+ more</p>
+                            </div>
+                        </figure>
+                    </a>
+                </div>
+                <div class="pjt">
+                    <a class="pjt_cont thecl">
+                        <figure class="pjt_more">
+                            <div class="txt_group">
+                                <p class="category">PC web</p>
+                                <P class="name">더 셀럽</P>
+                                <p class="more">+ more</p>
+                            </div>
+                        </figure>
+                    </a>
+                </div>
+                <div class="pjt">
+                    <a class="pjt_cont iros">
+                        <figure class="pjt_more">
+                            <div class="txt_group">
+                                <p class="category">PC web</p>
+                                <P class="name">대법원</P>
+                                <p class="more">+ more</p>
+                            </div>
+                        </figure>
+                    </a>
+                </div>
+            </div>
+            <div class="mid fs0">
+                <div class="pjt">
+                    <a class="pjt_cont hrjj">
+                        <figure class="pjt_more">
+                            <div class="txt_group">
+                                <p class="category">PC web</p>
+                                <P class="name">하림 지주</P>
+                                <p class="more">+ more</p>
+                            </div>
+                        </figure>
+                    </a>
+                </div>
+                <div class="pjt">
+                    <a class="pjt_cont cltv">
+                        <figure class="pjt_more">
+                            <div class="txt_group">
+                                <p class="category">PC/M web</p>
+                                <P class="name">셀럽 티비</P>
+                                <p class="more">+ more</p>
+                            </div>
+                        </figure>
+                    </a>
+                </div>
+                <div class="pjt">
+                    <a class="pjt_cont pktv">
+                        <figure class="pjt_more">
+                            <div class="txt_group">
+                                <p class="category">PC/M web</p>
+                                <P class="name">팝콘티비</P>
+                                <p class="more">+ more</p>
+                            </div>
+                        </figure>
+                    </a>
+                </div>
+            </div>
+            <div class="btm fs0">
+                <div class="pjt">
+                    <a class="pjt_cont">
+                        <figure class="pjt_more">
+                            <div class="txt_group">
+                                <p class="category">PC/M web</p>
+                                <P class="name">이벤트 페이지</P>
+                                <p class="more">+ more</p>
+                            </div>
+                        </figure>
+                    </a>
+                </div>
+                <div class="pjt">
+                    <a class="pjt_cont">
+                        <figure class="pjt_more">
+                            <div class="txt_group">
+                                <p class="category">PC/M web</p>
+                                <P class="name">이벤트 페이지</P>
+                                <p class="more">+ more</p>
+                            </div>
+                        </figure>
+                    </a>
+                </div>
+                <div class="pjt">
+                    <a class="pjt_cont">
+                        <figure class="pjt_more">
+                            <div class="txt_group">
+                                <p class="category">PC/M web</p>
+                                <P class="name">이벤트 페이지</P>
+                                <p class="more">+ more</p>
+                            </div>
+                        </figure>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

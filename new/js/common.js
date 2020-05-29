@@ -22,7 +22,7 @@ $(document).ready(function(){
         $(".nav a").removeClass("active");
         $(this).addClass("active");
         $("html").animate({
-              scrollTop: scrollPosition - 77
+            scrollTop: scrollPosition - 77
         }, 500);
     })
 
@@ -38,5 +38,14 @@ $(document).ready(function(){
         });
     });
 
+    //project detail popup
+    $(".pjt .pjt_cont").click(function(){
+        $(this).siblings(".popup_area").fadeIn();
+        $('body').css({'overflow': 'hidden', 'height': '100%','padding-right':'16px'});
+        $(".popup_pjt_detail .btn_close").click(function() {
+            $(".popup_area").fadeOut();
+            $('body').css({'overflow': 'auto', 'height': '100%','padding-right':'0'});
+        });
+    });
 
 });

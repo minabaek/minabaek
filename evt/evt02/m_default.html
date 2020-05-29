@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./../common.css">
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <style>
+        .evt_wrap{width:320px;overflow:hidden}
+        .evt_wrap img{vertical-align:top;max-width:100%}
+        .evt_inner{max-width:420px;margin:0 auto}
+        
+        .evt_top{position:relative;width:100%;height:552px;background:url('https://pic.popkontv.com/images/common/event/bg_2_201908exchange_m.png') 0 0 /100% 100% no-repeat}
+        .evt_top .tit_img{position:absolute;width:300px;top:56px;left:50%;margin-left:-150px}
+        .evt_top .tit_img img{width:100%;height:auto}
+        .evt_top .layer_front{position:absolute;width:100%;height:275px;bottom:-1px;z-index:8;
+            background:url('https://pic.popkontv.com/images/common/event/bg_front_201908exchange_m.png') 0 0 /cover no-repeat;}
+        .evt_top .layer_character{position:absolute;top:291px;left:100%;z-index:7;width:171px;height:191px;
+            background: url('https://pic.popkontv.com/images/common/event/img_bear_201908exchange.png') 0 0 /cover no-repeat;
+            animation: bear 0.5s linear 1s infinite alternate;}
+        .evt_top .layer_txt{display:none;position:absolute;top:285px;left:2%;z-index:9;width:158px;height:78px;
+            background: url('https://pic.popkontv.com/images/common/event/img_txt_201908exchange.png') 0 0 /cover no-repeat;
+            animation: crescendo 0.8s alternate infinite ease-in;}
+        .evt_top .btn_go_exchange{display:inline-block;position:absolute;width:188px;top:200px;left:50%;height:42px;margin-left:-94px;padding:0 37px 0 20px;border-radius:4px;
+            background:#202020 url('https://pic.popkontv.com/images/common/event/ic_arrow_201908exchange.png') 155px 17px /7px 9px no-repeat;
+            text-align:center;font-size:16px;color:#fff;font-weight:bold;line-height:42px}
+        
+        .evt_info{padding:15px 10px 18px;background:#000;text-align:center;color:#fff}
+        .evt_info .tit{font-size:15px;font-weight:bold;letter-spacing:-0.5px}
+        .evt_info .info_txt{margin-top:8px;font-size:12px;letter-spacing:-0.5px}
+        
+        
+        .evt_noti{background-color:#f8f8f8;padding:20px 10px}
+        .evt_noti .tit{font-size:15px;color:#9b9b9b;margin-bottom:11px;font-weight:bold}
+        .evt_noti ul li{margin-top:7px;color:#9b9b9b;padding-left:7px;position:relative;font-size:12px;line-height:1.4;letter-spacing:-0.5px;word-break:break-all}
+        .evt_noti ul li:first-child{margin-top:0}
+        .evt_noti ul li:before{position:absolute;top:6px;left:0;width:3px;border-radius:50%;height:3px;background:#9b9b9b;content:''}
+        
+        @keyframes bear {
+        0%   {opacity: 1.0; top:300px;}
+        100% {opacity: 1.0; top:295px;}
+        }
+        
+        @keyframes crescendo {
+          0%   {transform: scale(.8);}
+          100% {transform: scale(1);}
+        }
+    </style>
+    <script type="text/javascript">
+        $(".layer_character").ready(function(){
+            $('.layer_character').animate({left:'34%'},2000).queue(function() {
+                $('.layer_txt').fadeIn();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="evt_wrap">
+        <div class="evt_top">
+            <div class="tit_img">
+                <img src="https://pic.popkontv.com/images/common/event/img_txt_2_201908exchange_m.png" alt="지금 팝콘티비는 매일 매일 환전 OK!!">
+            </div>
+            <a href="<%=gourl%>" class="btn_go_exchange">환전신청 하러가기</a>
+            <div class="layer_txt"></div>
+            <div class="layer_character"></div>
+            <div class="layer_front">
+            </div>
+        </div>
+        <div class="evt_info">
+            <h3 class="tit">이벤트 기간</h3>
+            <p class="info_txt">2019년 08월 01일 00시 00분 부터 ~ 2019년 08월 31일 23시 59분 까지</p>
+        </div>
+        <div class="evt_noti">
+            <h3 class="tit">이벤트 유의사항</h3>
+            <ul>
+                <li>환전신청 가능 금액이 20,000 원 이상일 때부터 환전신청이 가능합니다.</li>
+                <li>
+                    환전신청 페이지에서 확인이 가능한 일자 별 환전가능 선물 팝콘의 수는 방송시작일 기준으로 적립이 되어 확인이 됩니다.
+                    <br>즉 , 1 월 1 일 시작한 방송에서 선물 받은 팝콘의 수는 (실제 팝콘선물 받은 일이 1 월 2 일이라고 하더라도) 방송 시작일인 1 월 1 일 자에서확인이 가능합니다.</li>
+                <li>
+                    환전 신청한 금액은 신청일 다음 날 저녁 5 시에서 9 시 사이에 입금이 진행됩니다.
+                    <br>(입금 당일 내부 업무 프로세스에 따라 입금 시간이 다소 다를 수 있습니다.)
+                </li>
+                <li>
+                    방송민원 게시판에 민원이 접수되어 처리 중일때는 신청한 환전금액 지급이 거절 될 수 있습니다.
+                    <br>민원처리 완료 후 재 신청해주시면 정상적으로 입금이 진행됩니다. (단 , 민원 접수자는 공휴일 환전 불가합니다.)
+                </li>
+                <li>서비스 이용이 영구적으로 정지 되었을 경우에는 정지일로부터 60 일 이후에 환전신청이 가능합니다.</li>
+                <li>00 시 00 분 ~ 06 시 00 분 사이에는 환전신청이 불가하오니 추후에 다시 신청해주시기 바랍니다.</li>
+                <li>악의적으로 접수한 민원이 확인될시 해당 민원 요청자는 영구정지 처리 진행 됩니다.</li>
+                <li>2019년 8 월 31 일 이후에 신청한 환전은 주말 및 공휴일에 입금되지 않습니다.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

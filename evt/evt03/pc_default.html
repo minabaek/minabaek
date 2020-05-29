@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./../common.css">
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script>
+        $(".charac").ready(function(){
+            setTimeout(function() {
+                $(".charac").css("animation-play-state", "paused");
+            }, 8800);
+            setTimeout(function() {
+                $(".enter01").css("animation-play-state", "paused");
+            }, 8600);
+    
+        });
+    </script>
+    <style>
+        @keyframes enter {
+             0%{bottom:120px;background-position:0}
+             100% {bottom:130px;background-position: -1330px;}
+        }
+        @keyframes charac {
+             0%{left:-266px;animation-timing-function:cubic-bezier(0.25, 0.25, 0.75, 0.75)}
+             100% {left:100%;}
+        }
+        @-webkit-keyframes enter {
+             0%{bottom:120px;background-position:0}
+             100% {bottom:130px;background-position: -1330px;}
+        }
+        @-webkit-keyframes charac {
+             0%{left:-266px;animation-timing-function:cubic-bezier(0.25, 0.25, 0.75, 0.75)}
+             100% {left:100%;}
+        }
+        @-moz-keyframes enter {
+             0%{bottom:120px;background-position:0}
+             100% {bottom:130px;background-position: -1330px;}
+        }
+        @-moz-keyframes charac {
+             0%{left:-266px;animation-timing-function:cubic-bezier(0.25, 0.25, 0.75, 0.75)}
+             100% {left:100%;}
+        }
+    
+        .content{padding:20px 0 30px 0;}
+        .evt_wrap img{vertical-align:top}
+        .evt_wrap{overflow:hidden;position:relative;background:#fff;width:1055px;margin:0 auto}
+    
+        .evt_top{position:relative}
+        .evt_top .enter01 {
+            position:absolute;
+            bottom:120px;
+            width: 266px;
+            height: 380px;
+            background: url("https://pic.popkontv.com/images/common/event/character_201911Rank.png") left center;
+            background-size: auto 380px;
+            display: block;
+            -webkit-animation:enter .5s steps(5) alternate infinite;
+            -moz-animation:enter .5s steps(5) alternate infinite;
+            animation:enter .5s steps(5) alternate infinite;
+        }
+        .evt_top .charac{
+            position:absolute;
+            -webkit-animation:charac 6s infinite;
+            -moz-animation:charac 6s infinite;
+            animation:charac 6s infinite;
+        }
+        .evt_top .button_area{padding-bottom:100px;background:#333333;text-align:center}
+        .evt_top .button_area a{display:inline-block;border-radius:15px}
+        .evt_top .button_area a img{border-radius:15px}
+        /* ranking */
+        .ranking{padding:70px 0 70px}
+        .ranking .top {position:relative;height:54px}
+        .ranking .top .tab{display:inline-block;margin-left:20px}
+        .ranking .top .tab li{float:left;width:180px;height:54px;border:1px solid #333 ;background:#fff;font-size:20px;font-weight:normal;line-height:52px;color:#333 ;text-align:center;letter-spacing:-0.8px;cursor:pointer}
+        .ranking .top .tab li:hover,
+        .ranking .top .tab li.on{color:#fff;background:#333 }
+        .ranking .top .count-point{position:absolute;right:0;bottom:20px;font-size:15px;color:#9d9d9d;letter-spacing:-1px;line-height:1}
+    
+    
+        .ranking-table{display:none;margin-top:-18px}
+        .ranking-table.on{display:block}
+        .ranking-table table{width:100%;margin-top:17px}
+        .ranking-table thead{border-top:1px solid #d1d2d3;border-bottom:1px solid #d1d2d3}
+        .ranking-table thead th{vertical-align:middle;height:74px;font-size:15px;line-height:1.6;letter-spacing:-0.9px;color:#222;text-align:center}
+        .ranking-table tbody td{vertical-align:middle;height:74px;border-bottom:1px solid #e7e8e8;font-size:15px;line-height:1.6;letter-spacing:-1px;color:#9d9d9d;text-align:center}
+        .ranking-table tbody td .thumb{display:inline-block;width:43px;height:43px;border-radius:50%;background-image:url("https://pic.popkontv.com/images/www/images/common/defaultProfile.png");background-repeat:no-repeat;background-size:cover;background-position:center;text-indent:-9999px}
+        .ranking-table tbody td.btn-group{font-size:0}
+        .ranking-table tbody td .btn-about{display:inline-block;width:80px;height:36px;border:1px solid #e6e6e6;font-size:14px;line-height:35px;text-align:center;color:#9d9d9d}
+        .ranking-table tbody td .btn-about+.btn-about{border-left:none}
+        .ranking-table tbody td .btn-about:hover{border-color:#333 ;background:#333 ;color:#fff}
+    
+        .evt_noti{background-color:#333333;padding:60px 70px;text-align:center}
+        .evt_noti .pt{color:#f2de56}
+        .evt_noti .evt_tit{font-size:32px;line-height:1}
+        .evt_noti ul{display:inline-block;width:656px;margin-top:55px}
+        .evt_noti ul li{color:#fff;padding-left:10px;position:relative;font-size:20px;line-height:1.8;letter-spacing:-1.54px;text-align:left}
+        .evt_noti ul li:before{display:block;width:3px;height:3px;background-color:#fff;border-radius:50%;position:absolute;top:15px;left:0;content:''}
+    </style>
+</head>
+<body>
+    <div class="evt_wrap">
+        <!--evt top-->
+        <div class="evt_top">
+            <img src="https://pic.popkontv.com/images/common/event/bg_201911Rank_pc.png" alt="펜트하우스는 점수가 두배! 적립금 받고 럭셔리한 가을 보내자!">
+            <div class="charac">
+                <div class="enter01"></div>
+            </div>
+            <img src="https://pic.popkontv.com/images/common/event/img_content_201911Rank_pc.png" alt="2019년11월 랭킹이벤트 컨텐츠">
+            <div class="button_area">
+                <a href="https://www.popkontv.com/vipmall/" target="_blank">
+                    <img src="https://pic.popkontv.com/images/common/event/btn_201911Rank.gif" alt="VIP몰 바로가기">
+                </a>
+            </div>
+        </div>
+        <div class="evt_noti">
+            <div class="evt_tit"><img src="https://pic.popkontv.com/images/common/event/img_tit_201911Rank_pc.png" alt="이벤트 유의사항"></div>
+            <ul class="dot_list">
+                <li class="pt">VIP몰 적립금은 지급일 기준 30일 이내 사용하지 않을시 소멸 됩니다.</li>
+                <li class="pt">1위~3위 당첨자는 고객센터 > 일대일 문의하기 게시판에 팝콘티비 야구 점퍼 색상, 사이즈, 주소를 게재해주시면 11월 이내 발송 진행됩니다.</li>
+                <li class="pt">2019년 11월 01일 00시 00분 이후 시작 11월 07일 17시 59분 이전에 선물 받은 팝콘에 대해서만 점수가 산정됩니다.</li>
+                <li class="pt">이벤트 기간 내에 선물한, 선물 받은 팝콘은 환불 불가합니다.</li>
+                <li class="pt">선물 받은 펜트하우스 팝콘만 2배의 점수로 산정됩니다.</li>
+                <li>팝콘 선물은 방송 시청중 선물, 웹사이트에서의 선물, 팝콘TV의 연동 플랫폼 내에서의 선물 모두 포함됩니다.</li>
+                <li>인기MC 및 신인MC는 중복 당첨이 가능합니다.</li>
+                <li>비정상적인 선물 및 의도적인 어뷰징 형태의 선물 내용이 확인될 경우 이벤트 당첨 대상에서 제외 될 수 있습니다.</li>
+                <li>이벤트 기간 내 제재 된 회원은 당일 당첨자 리스트에서 제외됩니다.</li>
+                <li>신인MC 당첨자 중 과거 방송자임이 확인될 경우 당첨 부분 취소 처리 될 수 있습니다.</li>
+                <li class="pt">신인MC의 기준은 첫 방송 시작 이후 90일 이하인 회원만 해당됩니다.<br>(<span class="pt">2019년 11월 07일 이벤트 종료일 기준</span>으로 90일 이전인 <span class="pt">2019년 08월 07일 00시 00분 이후로 첫 방송을 시작한 방송자</span>)</li>
+                <li>이벤트 당첨자는 반드시 팝콘TV PC웹사이트 > 마이페이지 > 환전인증 및 변경하기 페이지에서 환전인증을 진행해주시기 바랍니다.(기존에 인증완료된 회원의 경우, 재인증을 진행하지 않으셔도 무관합니다.)</li>
+                <li>상금은 2019년 11월 이내로 입금처리 진행됩니다.</li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>

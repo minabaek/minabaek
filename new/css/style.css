@@ -23,7 +23,7 @@
 .main_visual .main_txt_box .main_sub_txt{margin-top:30px;font-size:14px;line-height:1.6;color:#797979;letter-spacing:0.03rem}
 
 .main_visual .main_txt_box .bx_pager{margin-top:15px}
-.main_visual .main_txt_box .bx_pager>a{display:inline-block;width:8px;height:8px;margin-left:10px;border-radius:4px;background:#b6b3ad}
+.main_visual .main_txt_box .bx_pager>a{display:inline-block;width:8px;height:8px;margin-left:5px;border-radius:4px;background:#b6b3ad}
 .main_visual .main_txt_box .bx_pager>a.active{background:#2d2d2b;width:16px}
 
 /* main - slide*/
@@ -39,7 +39,7 @@
 .cont_tit.black{color:#555}
 
 /* history */
-.history_box{padding:100px 0}        
+.history_box{padding:100px 0}
 .history_box .inner_box{width:1000px;margin:0 auto;font-size:0}
 .history_box .img_box{display:inline-block;vertical-align:middle;width:50%;height:400px;background:url('./../img/img_04.png') 50% 50% /cover no-repeat}
 .history_box .history{display:inline-block;vertical-align:middle;width:50%;padding-left:40px}
@@ -60,17 +60,17 @@
 .skill_box .inner_box{width:1000px;margin:0 auto;font-size:0}
 .skill_box .cont_box{margin-top:50px}
 .skill_box .cont_box .detail{display:inline-block;vertical-align:top;width:50%;height:100px}
-.skill_box .cont_box .detail.markup{padding-left:88px;background:url('./../img/ico_skills_01.png') 0 5px no-repeat}
-.skill_box .cont_box .detail.js{padding-left:90px;background:url('./../img/ico_skills_02.png') 0 5px no-repeat}
-.skill_box .cont_box .detail.vs{padding-left:91px;background:url('./../img/ico_skills_03.png') 0 5px no-repeat}
-.skill_box .cont_box .detail.etc{padding-left:86px;background:url('./../img/ico_skills_04.png') 0 5px no-repeat}
+.skill_box .cont_box .detail.markup{padding-left:83px;background:url('./../img/ico_skills_01.png') 0 5px no-repeat}
+.skill_box .cont_box .detail.js{padding-left:85px;background:url('./../img/ico_skills_02.png') 0 5px no-repeat}
+.skill_box .cont_box .detail.vs{padding-left:86px;background:url('./../img/ico_skills_03.png') 0 5px no-repeat}
+.skill_box .cont_box .detail.etc{padding-left:82px;background:url('./../img/ico_skills_04.png') 0 5px no-repeat}
 .skill_box .cont_box .detail .sub_tit{font-size:18px;font-weight:400;color:#fff;letter-spacing:0.03rem}
-.skill_box .cont_box .detail .sub_txt{margin-top:20px;font-size:13px;font-weight:100;color:#aaa;letter-spacing:0.02rem;line-height:1.7}
+.skill_box .cont_box .detail .sub_txt{margin-top:10px;font-size:13px;font-weight:100;color:#d2d2d2;letter-spacing:0.02rem;line-height:1.7}
 
 .project_area{padding:80px 0}
 .project_box.inner_box{width:900px;margin:0 auto}
 .project_box .pjt{display:inline-block;vertical-align:middle;width:300px;padding:15px 10px}
-.project_box .pjt .pjt_cont{position:relative;display:block;height:300px;padding:15px;background-position:50% 50%;background-size:100% 100%;background-repeat:no-repeat}
+.project_box .pjt .pjt_cont{position:relative;display:block;height:300px;padding:15px;background-position:50% 50%;background-size:100% 100%;background-repeat:no-repeat;cursor:pointer}
 .project_box .pjt .pjt_cont.wgs{background-image:url("./../img/thumb_01_03.png")}
 .project_box .pjt .pjt_cont.thecl{background-image:url("./../img/thumb_02_04.png")}
 .project_box .pjt .pjt_cont.iros{background-image:url("./../img/thumb_01_06.png")}
@@ -85,8 +85,8 @@
     position: absolute;
     top: 0; left:0; right:0; bottom:0;
     background: inherit;
-    filter: blur(6px); 
-    -webkit-filter: blur(6px); 
+    filter: blur(6px);
+    -webkit-filter: blur(6px);
     -moz-filter: blur(6px);
     -o-filter: blur(6px)
 } */
@@ -118,11 +118,11 @@
 .footer{padding:30px;background:#333;text-align:center;font-size:13px;color:#ddd;letter-spacing:0.01rem}
 
 /* sub title typing effect*/
-@keyframes myBlinker { 
+@keyframes myBlinker {
     from { opacity: 1.0 } to { opacity: 0.0 }
 }
 
-.blinker { 
+.blinker {
     animation-name: myBlinker;
     animation-iteration-count: infinite;
     animation-timing-function: cubic-bezier(1,0,0,1);
@@ -137,3 +137,19 @@
     background: rgba(255, 160, 122, 1.0)
 }
 .container_txt{font-size:50px;font-weight:bold;color:#584435}
+
+/* pjt detail popup */
+.popup_area{position:fixed;top:0;left:0;z-index:99999;width:100%;height:100%;text-align:center;background:rgba(0,0,0,.8);}
+.popup_area::before{display:inline-block;width:1px;height:100%;margin-right:0;vertical-align:middle;content:""}
+.popup_pjt_detail{position:relative;display:inline-block;vertical-align:middle;width:500px;height:auto;padding:30px;text-align:center;}
+.popup_pjt_detail .btn_close{position: absolute;top:5px;right:10px;width:25px;height:25px;background:url("./../img/img_btn_close.png") 0 0 /100% no-repeat;font-size:0}
+.popup_pjt_detail .pjt_category{font-size:14px;color:#858585;font-weight:200;letter-spacing:0.03rem}
+.popup_pjt_detail .pjt_name{margin-top:10px;font-size:25px;color:#fff;font-weight:300}
+.popup_pjt_detail .pjt_img{margin-top:25px;}
+.popup_pjt_detail .pjt_link_group{margin-top:10px;}
+.popup_pjt_detail .pjt_link_group .btn_pjt{display:inline-block;vertical-align:middle;width:148px;height:38px;border-radius:3px;border:1px solid #dfdfdf;color:#dfdfdf;line-height:36px;text-align:center;letter-spacing:0.03rem;font-size:13px;}
+.popup_pjt_detail .pjt_link_group .btn_pjt:hover{background:#dfdfdf;color:#000}
+.popup_pjt_detail .pjt_article{margin-top:15px}
+.popup_pjt_detail .pjt_article ul{display:inline-block;}
+.popup_pjt_detail .pjt_article ul li{margin-top:5px;font-size:14px;color:#fff;font-weight:200;line-height:1.4;text-align:center;}
+.popup_pjt_detail .pjt_article ul li.txt_deco{font-size:13px;margin-top:10px;padding-top:10px;border-top:1px solid #fff}
